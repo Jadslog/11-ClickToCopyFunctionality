@@ -40,6 +40,33 @@ body {
     outline: none;
 }
 
+.click-to-copy input.error {
+    border: 2px solid red;
+    animation: shake 300ms ease-in-out;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-2px);
+    }
+
+    40% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-2px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }           
+}      
+
 .click-to-copy .box {
     height: 120px;
     width: 400px;
