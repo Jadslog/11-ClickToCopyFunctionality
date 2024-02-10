@@ -24,11 +24,15 @@ const updateBorderRadius = (e) => {
 borderRadiusInput.addEventListener("input", updateBorderRadius);
 
 const copyText = () => {
-    let code = "Text to be copied"
+  	let borderRadiusValue = borderRadiusInput.value || 0;
+    let code = `border-radius: ${Math.floor(borderRadiusValue)}px;`;
 
     navigator.clipboard.writeText(code).then(() => {
-        console.log("Copied code:", code);
-    });
+       toastNotification.classList.add("active");
+       setTimeout(() => {
+            toastNotification.classList.remove("active");
+        }, 2000);
+   });
 };
 
 copyBtn.addEventListener("click", copyText);

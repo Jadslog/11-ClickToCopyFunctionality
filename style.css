@@ -64,8 +64,8 @@ body {
 
     100% {
         transform: translateX(0);
-    }           
-}      
+    }
+}
 
 .click-to-copy .box {
     height: 120px;
@@ -86,9 +86,17 @@ body {
 
 .click-to-copy .toast-notification {
     position: fixed;
-    bottom: 40px;
+    bottom: 0px;
+    pointer-events: none;
+    opacity: 0;
     background: #111;
     color: #fff;
     padding: 8px 32px;
     border-radius: 4px;
+    transition: all 400ms ease;
+}
+
+.click-to-copy .toast-notification.active {
+    opacity: 1;
+    bottom: 40px;
 }
